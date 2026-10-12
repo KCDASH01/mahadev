@@ -1,0 +1,36 @@
+export const homeBrand = {
+    name: 'Mahadev Multipurpose Co-operative Society Ltd',
+    shortName: 'Mahadev',
+    primary: '#062A4D',
+    primaryDark: '#041F3A',
+    primaryDeep: '#03182D',
+    accent: '#D6A62D',
+    accentHover: '#B88418',
+    white: '#FFFFFF',
+    surface: '#F5F1E8',
+    ivory: '#FCFAF5',
+    beige: '#E8DDC5',
+    text: '#09233D',
+    muted: '#647487',
+    logoTransparent: '/storage/mahadev-logo.jpeg',
+    logoOriginal: '/storage/mahadev-logo.jpeg',
+    instagramHandle: 'mahadev.cooperative',
+    contactEmail: 'support@mahadevcooperative.in',
+    contactPhones: ['+91 00000 00000'],
+    contactPhone: '+91 00000 00000',
+    contactAddress: 'Odisha, India',
+    trustStatement: 'Trusted quality · Fair value · Service with responsibility',
+    socialLinks: {
+        instagram: '/contact',
+        facebook: '/contact',
+        youtube: '/contact',
+        whatsapp: '/contact',
+    },
+} as const;
+
+export const homeOffers = [
+    { id: 'garments', text: 'New Garment Collection Now Available', highlight: 'New Collection' },
+    { id: 'furniture', text: 'Furniture for Every Room & Every Budget', highlight: 'Every Budget' },
+    { id: 'quality', text: 'Quality Products at Co-operative Value', highlight: 'Co-operative Value' },
+    { id: 'shipping', text: 'Secure Ordering & Reliable Delivery', highlight: 'Reliable Delivery' },
+] as const;

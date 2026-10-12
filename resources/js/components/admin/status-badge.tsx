@@ -1,0 +1,9 @@
+import { Badge } from '@/components/ui/badge';
+
+export default function StatusBadge({ status }: { status: string }) {
+    return (
+        <Badge variant={status === 'active' ? 'default' : 'secondary'}>
+            {status}
+        </Badge>
+    );
+}

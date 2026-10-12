@@ -1,0 +1,28 @@
+[2026-09-18 12:24:54] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:55] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery shipment created {"order_number":"H2S-260916-54FB73","awb":"1234567890123","upload_wbn":"UPL123"} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.ERROR: Automatic Delhivery shipment creation failed {"order_number":"H2S-260916-36ACF4","message":"Warehouse not found"} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:24:57] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery shipment created {"order_number":"H2S-260916-A291DC","awb":"1234567890123","upload_wbn":"UPL123"} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.ERROR: Automatic Delhivery shipment creation failed {"order_number":"H2S-260916-9445F9","message":"Warehouse not found"} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:36] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:37] testing.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:37] testing.INFO: Delhivery API call {"endpoint":"/api/p/edit","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:32:37] testing.INFO: Delhivery API call {"endpoint":"/api/p/edit","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-18 12:58:15] production.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":6,"shipment_id":2,"duration_ms":894,"error":null} 
+[2026-09-18 12:58:15] production.INFO: Delhivery shipment created {"order_number":"H2S-260918-C3OARL","awb":"66352910000033","upload_wbn":"UPL10266226912212110060"} 
+[2026-09-18 13:01:38] production.INFO: Delhivery API call {"endpoint":"/api/v1/packages/json/","method":"GET","status":200,"order_id":6,"shipment_id":2,"duration_ms":702,"error":null} 
+[2026-09-18 13:06:36] production.INFO: Delhivery API call {"endpoint":"/api/p/edit","method":"POST","status":200,"order_id":6,"shipment_id":2,"duration_ms":831,"error":null} 

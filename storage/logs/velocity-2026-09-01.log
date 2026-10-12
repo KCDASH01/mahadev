@@ -1,0 +1,8 @@
+[2026-09-01 00:50:42] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":1723,"error":null} 
+[2026-09-01 00:50:44] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/serviceability","method":"POST","status":200,"order_id":28,"shipment_id":null,"duration_ms":1519,"error":null} 
+[2026-09-01 00:50:44] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":899,"error":null} 
+[2026-09-01 00:50:50] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/forward-order-orchestration","method":"POST","status":200,"order_id":28,"shipment_id":8,"duration_ms":5209,"error":null} 
+[2026-09-01 01:07:02] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":1145,"error":null} 
+[2026-09-01 01:07:04] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/serviceability","method":"POST","status":200,"order_id":1,"shipment_id":null,"duration_ms":1265,"error":null} 
+[2026-09-01 01:07:04] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":640,"error":null} 
+[2026-09-01 01:07:07] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/forward-order-orchestration","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":2791,"error":null} 

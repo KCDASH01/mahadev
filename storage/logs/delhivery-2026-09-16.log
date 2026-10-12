@@ -1,0 +1,12 @@
+[2026-09-16 16:37:16] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:18] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:19] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:19] testing.INFO: Delhivery shipment created {"order_number":"H2S-260916-ABC123","awb":"1234567890123","upload_wbn":"UPL123"} 
+[2026-09-16 16:37:19] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:19] testing.ERROR: Automatic Delhivery shipment creation failed {"order_number":"H2S-260916-ABC123","message":"Warehouse not found"} 
+[2026-09-16 16:37:35] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:35] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:35] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:35] testing.INFO: Delhivery shipment created {"order_number":"H2S-260916-ABC123","awb":"1234567890123","upload_wbn":"UPL123"} 
+[2026-09-16 16:37:35] testing.INFO: Delhivery API call {"endpoint":"/api/cmu/create.json","method":"POST","status":200,"order_id":1,"shipment_id":1,"duration_ms":null,"error":null} 
+[2026-09-16 16:37:35] testing.ERROR: Automatic Delhivery shipment creation failed {"order_number":"H2S-260916-ABC123","message":"Warehouse not found"} 

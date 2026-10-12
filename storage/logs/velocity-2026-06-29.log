@@ -1,0 +1,9 @@
+[2026-06-29 22:10:02] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":960,"error":null} 
+[2026-06-29 22:12:12] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":1774,"error":null} 
+[2026-06-29 22:12:14] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/serviceability","method":"POST","status":200,"order_id":19,"shipment_id":null,"duration_ms":1068,"error":null} 
+[2026-06-29 22:12:14] production.ERROR: Automatic Velocity shipment creation failed {"order_number":"H2S-260629-PDQ2Y2","message":"No courier serviceable for this pincode and payment mode."} 
+[2026-06-29 22:16:50] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":822,"error":null} 
+[2026-06-29 22:16:52] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/serviceability","method":"POST","status":200,"order_id":20,"shipment_id":null,"duration_ms":1124,"error":null} 
+[2026-06-29 22:16:52] production.ERROR: Automatic Velocity shipment creation failed {"order_number":"H2S-260629-8F4JTB","message":"No courier serviceable for this pincode and payment mode."} 
+[2026-06-29 22:20:42] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/auth-token","method":"POST","status":200,"order_id":null,"shipment_id":null,"duration_ms":913,"error":null} 
+[2026-06-29 22:20:43] production.INFO: Velocity API call {"endpoint":"/custom/api/v1/serviceability","method":"POST","status":200,"order_id":20,"shipment_id":null,"duration_ms":1192,"error":null} 
