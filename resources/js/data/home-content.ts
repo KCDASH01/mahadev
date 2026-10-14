@@ -43,7 +43,7 @@ export const promoStrip = {
 
 export const exploreCollections = [
     { title: 'Gents', image: img('photo-1617137968427-85924c800a22', 900), href: '/collection/gents' },
-    { title: 'Ladies', image: img('photo-1583391733956-6c78276477e2', 900), href: '/collection/ladies' },
+    { title: 'Ladies', image: '/storage/ladies-explore.jpg', href: '/collection/ladies' },
     { title: 'Furniture', image: img('photo-1555041469-a586c61ea9bc', 900), href: '/collection/furniture' },
 ];
 

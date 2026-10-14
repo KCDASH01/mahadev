@@ -158,7 +158,7 @@
     html {
         overflow-x: clip;
         scrollbar-width: thin;
-        scrollbar-color: #8b1e31 #ffffff;
+        scrollbar-color: #012E6D #ffffff;
     }
 
     body {
@@ -175,13 +175,13 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background: #c9b4ab;
+        background: #012E6D;
         border: 2px solid #ffffff;
         border-radius: 0;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #8b1e31;
+        background: #011E4A;
     }
 
     ::-webkit-scrollbar-corner {

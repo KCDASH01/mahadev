@@ -20,7 +20,7 @@ class ExploreCollectionService
      */
     private const EXPLORE_IMAGES = [
         'gents' => 'https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=85',
-        'ladies' => 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85',
+        'ladies' => 'ladies-explore.jpg',
         'furniture' => 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85',
     ];
 
@@ -29,7 +29,7 @@ class ExploreCollectionService
      */
     private const FALLBACK_IMAGES = [
         'gents' => 'https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=85',
-        'ladies' => 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85',
+        'ladies' => 'ladies-explore.jpg',
         'furniture' => 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85',
     ];
 
@@ -40,7 +40,7 @@ class ExploreCollectionService
      */
     private const IMAGE_POSITIONS = [
         'gents' => 'center 15%',
-        'ladies' => 'center 12%',
+        'ladies' => 'center 20%',
         'furniture' => 'center center',
     ];
 
