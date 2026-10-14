@@ -11,6 +11,8 @@ export type CompressionOptions = {
     maxInitialSizeMb?: number;
     targetQuality?: number;
     preferredMimeType?: 'image/webp' | 'image/jpeg' | 'image/png';
+    /** Keep the encoded file under this size. Used where PHP upload_max_filesize is 2MB. */
+    maxOutputBytes?: number;
 };
 
 export type CompressionResult = {
@@ -195,8 +197,12 @@ export async function compressImage(
         opts.maxHeight,
     );
 
+    const outputBudget = opts.maxOutputBytes;
+    const exceedsOutputBudget = outputBudget !== undefined && originalSize > outputBudget;
+
     // If image is already smaller than 300KB and within max dimensions, keep original
     if (
+        !exceedsOutputBudget &&
         originalSize <= 300 * 1024 &&
         originalWidth <= opts.maxWidth &&
         originalHeight <= opts.maxHeight
@@ -219,9 +225,6 @@ export async function compressImage(
 
     // 5. Draw on Canvas with high-quality smoothing
     const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-
     const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) {
         throw new Error('Unable to create canvas context for image compression.');
@@ -229,7 +232,19 @@ export async function compressImage(
 
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img, 0, 0, width, height);
+
+    const draw = (targetWidth: number, targetHeight: number) => {
+        canvas.width = targetWidth;
+        canvas.height = targetHeight;
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+        ctx.clearRect(0, 0, targetWidth, targetHeight);
+        ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+    };
+
+    let outputWidth = width;
+    let outputHeight = height;
+    draw(outputWidth, outputHeight);
 
     // 6. Select output format & encode
     const webpAvailable = isWebpSupported();
@@ -239,16 +254,53 @@ export async function compressImage(
         outputMimeType = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
     }
 
-    const blob = await new Promise<Blob | null>((resolve) => {
-        canvas.toBlob(resolve, outputMimeType, opts.targetQuality);
-    });
+    const encode = (quality: number) =>
+        new Promise<Blob | null>((resolve) => {
+            canvas.toBlob(resolve, outputMimeType, quality);
+        });
+
+    let quality = opts.targetQuality;
+    let blob = await encode(quality);
 
     if (!blob) {
         throw new Error('Image compression failed during blob generation.');
     }
 
+    if (outputBudget !== undefined) {
+        while (blob.size > outputBudget && quality > 0.45) {
+            quality = Math.round((quality - 0.08) * 100) / 100;
+            const next = await encode(quality);
+            if (!next) {
+                break;
+            }
+            blob = next;
+        }
+
+        while (blob.size > outputBudget && outputWidth > 960) {
+            outputWidth = Math.max(960, Math.round(outputWidth * 0.85));
+            outputHeight = Math.max(1, Math.round(outputHeight * 0.85));
+            draw(outputWidth, outputHeight);
+            const next = await encode(quality);
+            if (!next) {
+                break;
+            }
+            blob = next;
+        }
+
+        if (blob.size > outputBudget) {
+            throw new Error(
+                `Could not shrink this image under ${formatFileSize(outputBudget)}. Try a smaller file.`,
+            );
+        }
+    }
+
     // 7. If compressed blob is unexpectedly larger than original, keep original
-    if (blob.size >= originalSize && originalWidth <= opts.maxWidth && originalHeight <= opts.maxHeight) {
+    if (
+        !exceedsOutputBudget &&
+        blob.size >= originalSize &&
+        originalWidth <= opts.maxWidth &&
+        originalHeight <= opts.maxHeight
+    ) {
         return {
             file,
             originalSize,
@@ -295,8 +347,8 @@ export async function compressImage(
         dimensions: {
             originalWidth,
             originalHeight,
-            width,
-            height,
+            width: outputWidth,
+            height: outputHeight,
         },
         format: extension,
     };
