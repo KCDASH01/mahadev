@@ -24,7 +24,7 @@ export function HomeLogo({
         <Link
             href="/"
             className={cn(
-                'relative z-10 flex shrink-0 items-center overflow-hidden rounded-md bg-black',
+                'relative z-10 flex shrink-0 items-center',
                 isFooter ? 'h-[88px] w-[124px]' : 'h-14 w-[79px] sm:h-[68px] sm:w-[96px]',
                 linkClassName,
             )}

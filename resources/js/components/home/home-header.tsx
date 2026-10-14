@@ -164,19 +164,12 @@ export function HomeHeader({
 
     const navLinkClass = (highlight?: boolean) =>
         cn(
-            "shrink-0 px-2 py-2 text-[12px] font-medium tracking-[0.16em] whitespace-nowrap uppercase transition lg:px-3 lg:text-[13px]",
-            isOverlay
-                ? highlight
-                    ? 'text-white/90 hover:text-white'
-                    : 'text-white hover:text-white/80'
-                : highlight
-                  ? 'text-[#D6A62D]'
-                  : 'text-[#D6A62D] hover:text-[#041F3A]',
+            'shrink-0 px-2 py-2 text-[12px] font-bold tracking-[0.14em] whitespace-nowrap uppercase transition lg:px-3 lg:text-[13px]',
+            highlight ? 'text-[#012E6D]' : 'text-[#012E6D] hover:text-[#041F3A]',
         );
 
     const iconLinkClass = cn(
-        'relative grid h-10 w-10 place-items-center transition',
-        isOverlay ? 'text-white hover:text-white/80' : 'text-[#09233D] hover:text-[#062A4D]',
+        'relative grid h-10 w-10 place-items-center text-[#012E6D] transition hover:text-[#041F3A]',
     );
 
     useEffect(() => {
@@ -269,7 +262,7 @@ export function HomeHeader({
                 <Link
                     key={item.label}
                     href={item.href}
-                    className="flex h-12 items-center border-b border-[#E8DDC5] text-sm font-medium tracking-wide text-[#D6A62D] uppercase"
+                    className="flex h-12 items-center border-b border-[#E8DDC5] text-sm font-bold tracking-wide text-[#012E6D] uppercase"
                     onClick={() => setMobileOpen(false)}
                 >
                     {item.label}
@@ -286,7 +279,7 @@ export function HomeHeader({
                 <Link
                     key={item.label}
                     href={item.href}
-                    className="flex h-12 items-center border-b border-[#E8DDC5] text-sm font-medium tracking-wide text-[#D6A62D] uppercase"
+                    className="flex h-12 items-center border-b border-[#E8DDC5] text-sm font-bold tracking-wide text-[#012E6D] uppercase"
                     onClick={() => setMobileOpen(false)}
                 >
                     {item.label}
@@ -298,7 +291,7 @@ export function HomeHeader({
             <div key={item.label} className="border-b border-[#E8DDC5]">
                 <button
                     type="button"
-                    className="flex h-12 w-full items-center justify-between text-sm font-medium tracking-wide text-[#D6A62D] uppercase"
+                    className="flex h-12 w-full items-center justify-between text-sm font-bold tracking-wide text-[#012E6D] uppercase"
                     onClick={() => setMobileMega(open ? null : megaKey)}
                 >
                     {item.label}

@@ -54,8 +54,8 @@
             @endif
         </style>
 
-        <link rel="icon" href="/storage/mahadev-logo.jpeg" type="image/jpeg">
-        <link rel="apple-touch-icon" href="/storage/mahadev-logo.jpeg">
+        <link rel="icon" href="/storage/mahadev-logo.png" type="image/png">
+        <link rel="apple-touch-icon" href="/storage/mahadev-logo.png">
         <link rel="preload" href="/fonts/helvetica/texgyreheros-regular.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/fonts/helvetica/texgyreheros-bold.woff2" as="font" type="font/woff2" crossorigin>
         <style>

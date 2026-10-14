@@ -24,17 +24,16 @@ export function HomeAuthLinks({
     const isLight = tone === 'light';
 
     const navLinkClass = cn(
-        'hidden h-9 items-center px-2 text-[12px] font-medium tracking-[0.16em] uppercase transition lg:inline-flex lg:px-3',
-        isLight ? 'text-white hover:text-white/80' : 'text-[#09233D] hover:text-[#062A4D]',
+        'hidden h-9 items-center px-2 text-[12px] font-bold tracking-[0.14em] text-[#012E6D] uppercase transition hover:text-[#041F3A] lg:inline-flex lg:px-3',
     );
 
     const accountClass = cn(
         variant === 'stacked'
             ? 'flex h-12 items-center justify-center gap-2 border border-[#E8DDC5] text-sm font-medium tracking-wide text-[#062A4D]'
             : variant === 'header'
-              ? 'inline-flex h-9 items-center gap-1.5 text-[12px] font-medium tracking-[0.16em] uppercase transition'
+              ? 'inline-flex h-9 items-center gap-1.5 text-[12px] font-bold tracking-[0.14em] uppercase transition'
               : 'hidden h-10 items-center gap-2 px-3 text-sm font-medium transition sm:inline-flex',
-        variant === 'header' && (isLight ? 'text-white hover:text-white/80' : 'text-[#09233D] hover:text-[#062A4D]'),
+        variant === 'header' && 'text-[#012E6D] hover:text-[#041F3A]',
         variant === 'inline' && !isLight && 'text-[#09233D] hover:text-[#062A4D]',
     );
 
@@ -42,9 +41,9 @@ export function HomeAuthLinks({
         variant === 'stacked'
             ? 'flex h-12 items-center justify-center border border-[#E8DDC5] text-sm font-medium tracking-wide text-[#062A4D]'
             : variant === 'header'
-              ? 'inline-flex h-9 items-center px-2 text-[12px] font-medium tracking-[0.16em] uppercase transition lg:px-3'
+              ? 'inline-flex h-9 items-center px-2 text-[12px] font-bold tracking-[0.14em] uppercase transition lg:px-3'
               : 'hidden h-10 items-center px-3 text-sm font-medium transition sm:inline-flex',
-        variant === 'header' && (isLight ? 'text-white hover:text-white/80' : 'text-[#09233D] hover:text-[#062A4D]'),
+        variant === 'header' && 'text-[#012E6D] hover:text-[#041F3A]',
         variant === 'inline' && !isLight && 'text-[#09233D] hover:text-[#062A4D]',
     );
 
@@ -52,12 +51,10 @@ export function HomeAuthLinks({
         variant === 'stacked'
             ? 'flex h-12 items-center justify-center bg-[#062A4D] text-sm font-medium tracking-wide text-[#FCFAF5]'
             : variant === 'header'
-              ? 'inline-flex h-9 items-center border px-3.5 text-[12px] font-medium tracking-[0.16em] uppercase transition lg:px-4'
+              ? 'inline-flex h-9 items-center border px-3.5 text-[12px] font-bold tracking-[0.14em] uppercase transition lg:px-4'
               : 'hidden h-10 items-center px-4 text-sm font-medium transition sm:inline-flex',
         variant === 'header' &&
-            (isLight
-                ? 'border-white text-white hover:bg-white hover:text-[#09233D]'
-                : 'border-[#062A4D] text-[#062A4D] hover:bg-[#062A4D] hover:text-[#FCFAF5]'),
+            'border-[#012E6D] text-[#012E6D] hover:bg-[#012E6D] hover:text-white',
         variant === 'inline' && 'bg-[#062A4D] text-[#FCFAF5] hover:bg-[#041F3A]',
     );
 

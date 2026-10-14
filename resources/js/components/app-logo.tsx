@@ -6,7 +6,7 @@ export default function AppLogo() {
 
     return (
         <>
-            <div className="flex h-8 w-11 items-center justify-center overflow-hidden rounded-md bg-black">
+            <div className="flex h-8 w-11 items-center justify-center">
                 {!hasError ? (
                     <img
                         src={homeBrand.logoTransparent}

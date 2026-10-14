@@ -11,7 +11,7 @@ export default function AdminAuthLayout({
         <div className="flex min-h-svh flex-col items-center justify-center bg-[#FCFAF5] px-4 py-10">
             <div className="w-full max-w-[420px]">
                 <div className="mb-8 text-center">
-                    <Link href="/" className="inline-flex overflow-hidden rounded-md bg-black">
+                    <Link href="/" className="inline-flex">
                         <img
                             src={homeBrand.logoTransparent}
                             alt={homeBrand.name}
