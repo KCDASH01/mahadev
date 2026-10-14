@@ -6,12 +6,12 @@ export default function AppLogo() {
 
     return (
         <>
-            <div className="flex aspect-square size-8 items-center justify-center overflow-hidden rounded-md bg-white">
+            <div className="flex h-8 w-11 items-center justify-center overflow-hidden rounded-md bg-black">
                 {!hasError ? (
                     <img
                         src={homeBrand.logoTransparent}
                         alt={homeBrand.name}
-                        className="size-7 object-contain"
+                        className="h-full w-full object-contain"
                         onError={() => setHasError(true)}
                     />
                 ) : (

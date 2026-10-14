@@ -87,7 +87,7 @@ export default function StorefrontHeader({
                             <img
                                 src={logo}
                                 alt={general?.site_name ?? 'Store'}
-                                className="h-9 w-auto object-contain md:h-10"
+                                className="h-14 w-auto rounded-md bg-black object-contain md:h-16"
                             />
                         ) : (
                             <div className="flex items-center gap-2.5">

@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import { homeBrand } from '@/data/home-brand';
 import type { AuthLayoutProps } from '@/types';
 
 export default function AdminAuthLayout({
@@ -10,8 +11,12 @@ export default function AdminAuthLayout({
         <div className="flex min-h-svh flex-col items-center justify-center bg-[#FCFAF5] px-4 py-10">
             <div className="w-full max-w-[420px]">
                 <div className="mb-8 text-center">
-                    <Link href="/" className="font-serif text-3xl font-medium tracking-tight text-[#062A4D]">
-                        Mahadev
+                    <Link href="/" className="inline-flex overflow-hidden rounded-md bg-black">
+                        <img
+                            src={homeBrand.logoTransparent}
+                            alt={homeBrand.name}
+                            className="h-24 w-auto object-contain"
+                        />
                     </Link>
                 </div>
 

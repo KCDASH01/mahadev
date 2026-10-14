@@ -26,7 +26,7 @@ function StoryModalOverlay({ overlay }: { overlay: SocialStoryOverlayData }) {
             <img
                 src={mediaUrl(homeBrand.logoTransparent) ?? homeBrand.logoTransparent}
                 alt={homeBrand.name}
-                className="mb-6 h-8 w-auto brightness-0 invert sm:h-10"
+                className="mb-6 h-16 w-auto rounded-md bg-black object-contain sm:h-20"
             />
             {overlay.eyebrow && (
                 <p className="text-xs font-medium tracking-[0.25em] uppercase sm:text-sm">{overlay.eyebrow}</p>

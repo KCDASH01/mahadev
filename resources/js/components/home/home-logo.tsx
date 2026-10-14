@@ -24,10 +24,8 @@ export function HomeLogo({
         <Link
             href="/"
             className={cn(
-                'relative z-10 flex shrink-0 items-center',
-                isFooter
-                    ? 'h-[82px] w-[150px] overflow-hidden rounded-xl bg-[#FCFAF5] p-1'
-                    : 'h-[72px] w-[112px] overflow-hidden rounded-lg bg-white/95 p-1 shadow-sm sm:h-[78px] sm:w-[122px]',
+                'relative z-10 flex shrink-0 items-center overflow-hidden rounded-md bg-black',
+                isFooter ? 'h-[88px] w-[124px]' : 'h-14 w-[79px] sm:h-[68px] sm:w-[96px]',
                 linkClassName,
             )}
         >

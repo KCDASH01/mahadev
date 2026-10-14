@@ -433,7 +433,7 @@ export function HomeHeader({
                             onClick={(event) => event.stopPropagation()}
                         >
                             <div className="flex items-center justify-between border-b border-[#E8DDC5] p-4">
-                                <HomeLogo linkClassName="h-[72px] w-[200px]" />
+                                <HomeLogo />
                                 <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close menu">
                                     <X className="h-5 w-5" />
                                 </button>
