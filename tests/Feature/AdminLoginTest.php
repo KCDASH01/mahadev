@@ -39,7 +39,7 @@ class AdminLoginTest extends TestCase
     public function test_admin_login_ignores_customer_intended_url(): void
     {
         $admin = User::factory()->admin()->create([
-            'email' => 'admin@bhulika.test',
+            'email' => 'admin@mahadev.test',
             'password' => 'secret-password',
         ]);
 
@@ -57,7 +57,7 @@ class AdminLoginTest extends TestCase
     public function test_admin_can_login_with_email_and_password(): void
     {
         $admin = User::factory()->admin()->create([
-            'email' => 'admin@bhulika.test',
+            'email' => 'admin@mahadev.test',
             'password' => 'secret-password',
         ]);
 
@@ -87,7 +87,7 @@ class AdminLoginTest extends TestCase
     public function test_customer_cannot_login_through_admin_login(): void
     {
         $customer = User::factory()->create([
-            'email' => 'customer@bhulika.test',
+            'email' => 'customer@mahadev.test',
             'phone' => '9123456789',
             'password' => 'secret-password',
             'role' => 'customer',

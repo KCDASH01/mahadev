@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.bhulika.com/sitemap.xml
+Sitemap: https://ecom.kanpritech.com/sitemap.xml

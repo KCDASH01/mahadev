@@ -26,7 +26,7 @@ class DelhiveryServiceTest extends TestCase
             'services.delhivery.enabled' => true,
             'services.delhivery.token' => 'test-delhivery-token',
             'services.delhivery.base_url' => 'https://track.delhivery.com',
-            'services.delhivery.pickup_location' => 'BHULIKA B2C',
+            'services.delhivery.pickup_location' => 'MAHADEV WAREHOUSE',
             'services.delhivery.auto_create_on_order' => true,
             'logging.default' => 'null',
         ]);
@@ -53,7 +53,7 @@ class DelhiveryServiceTest extends TestCase
             'order_date' => '2026-09-16',
             'total_amount' => 899,
             'quantity' => '1',
-            'seller_gst_tin' => '21AAPCB0914N1Z1',
+            'seller_gst_tin' => '27AAAAA0000A1Z5',
             'hsn_code' => '6109',
             'weight' => 0.5,
             'shipment_height' => 5,
@@ -61,7 +61,7 @@ class DelhiveryServiceTest extends TestCase
             'shipment_length' => 25,
         ];
 
-        $response = app(DelhiveryService::class)->createShipment($shipmentData, 'BHULIKA B2C');
+        $response = app(DelhiveryService::class)->createShipment($shipmentData, 'MAHADEV WAREHOUSE');
 
         $this->assertSame('UPL123', $response['upload_wbn']);
         $this->assertSame('1234567890123', $response['packages'][0]['waybill']);
@@ -74,7 +74,7 @@ class DelhiveryServiceTest extends TestCase
                 && $request->hasHeader('Authorization', 'Token test-delhivery-token')
                 && $request['format'] === 'json'
                 && is_array($data)
-                && ($data['pickup_location']['name'] ?? null) === 'BHULIKA B2C'
+                && ($data['pickup_location']['name'] ?? null) === 'MAHADEV WAREHOUSE'
                 && ($data['shipments'][0] ?? []) === $shipmentData;
         });
     }
@@ -98,7 +98,7 @@ class DelhiveryServiceTest extends TestCase
         app(DelhiveryService::class)->createShipment([
             'name' => 'Customer Name',
             'order' => 'H2S-FAIL',
-        ], 'BHULIKA B2C');
+        ], 'MAHADEV WAREHOUSE');
     }
 
     public function test_create_shipment_for_order_stores_awb_after_confirmation(): void
@@ -113,7 +113,7 @@ class DelhiveryServiceTest extends TestCase
 
         $this->assertSame('1234567890123', $shipment->awb_number);
         $this->assertSame('Delhivery', $shipment->courier_name);
-        $this->assertSame('BHULIKA B2C', $shipment->warehouse_id);
+        $this->assertSame('MAHADEV WAREHOUSE', $shipment->warehouse_id);
         $this->assertSame(ShippingShipment::STATUS_CREATED, $shipment->shipment_status);
         $this->assertSame('processing', $order->fresh()->order_status);
         $this->assertDatabaseHas('order_trackings', [
@@ -264,7 +264,7 @@ class DelhiveryServiceTest extends TestCase
         $order = $this->confirmedOrder(['order_status' => 'processing']);
         ShippingShipment::query()->create([
             'order_id' => $order->id,
-            'warehouse_id' => 'BHULIKA B2C',
+            'warehouse_id' => 'MAHADEV WAREHOUSE',
             'courier_name' => 'Delhivery',
             'shipment_status' => ShippingShipment::STATUS_FAILED,
         ]);
@@ -367,7 +367,7 @@ class DelhiveryServiceTest extends TestCase
     {
         return ShippingShipment::query()->create([
             'order_id' => $order->id,
-            'warehouse_id' => 'BHULIKA B2C',
+            'warehouse_id' => 'MAHADEV WAREHOUSE',
             'courier_name' => 'Delhivery',
             'awb_number' => '1234567890123',
             'shipment_status' => ShippingShipment::STATUS_CREATED,

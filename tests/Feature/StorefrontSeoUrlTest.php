@@ -73,7 +73,7 @@ class StorefrontSeoUrlTest extends TestCase
         $this->assertSame('/product/sambalpuri-handloom-half-shirt', StorefrontPath::product('sambalpuri-handloom-half-shirt'));
         $this->assertSame('Accessories', StorefrontPath::displayName('jewellery'));
         $this->assertSame(
-            'Sambalpuri Ethnic Shirt for Men | Bhulika',
+            'Shop Full Shirts Online | Men | Mahadev',
             CategorySeo::for('men', 'Full Shirts')['title'] ?? null,
         );
     }

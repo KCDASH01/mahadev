@@ -15,7 +15,7 @@ class OrderShipmentController extends Controller
     /**
      * Example: create a Delhivery shipment for a confirmed order.
      *
-     *   $delhivery->createShipment($shipmentData, 'BHULIKA B2C');
+     *   $delhivery->createShipment($shipmentData, $pickupLocationName);
      *
      * The order-aware helper below maps the order address/items and stores AWB details.
      */

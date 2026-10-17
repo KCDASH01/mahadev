@@ -19,9 +19,9 @@ class SitemapTest extends TestCase
         $response->assertOk();
         $this->assertStringContainsString('application/xml', (string) $response->headers->get('Content-Type'));
         $response->assertSee('https://www.xml-sitemaps.com/css/sitemap.css', false);
-        $response->assertSee('https://www.bhulika.com/', false);
-        $response->assertSee('https://www.bhulika.com/collection/women', false);
-        $response->assertSee('https://www.bhulika.com/privacy-policy', false);
+        $response->assertSee('https://ecom.kanpritech.com/', false);
+        $response->assertSee('https://ecom.kanpritech.com/collection/ladies', false);
+        $response->assertSee('https://ecom.kanpritech.com/privacy-policy', false);
         $response->assertSee('<priority>1.0000</priority>', false);
     }
 
@@ -66,8 +66,8 @@ class SitemapTest extends TestCase
         $response = $this->get('/sitemap.xml');
 
         $response->assertOk();
-        $response->assertSee('https://www.bhulika.com/product/sitemap-product', false);
+        $response->assertSee('https://ecom.kanpritech.com/product/sitemap-product', false);
         $response->assertDontSee('hidden-product', false);
-        $response->assertSee('https://www.bhulika.com/blog/sitemap-post', false);
+        $response->assertSee('https://ecom.kanpritech.com/blog/sitemap-post', false);
     }
 }

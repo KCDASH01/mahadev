@@ -21,7 +21,7 @@ class FashionSocialStorySeeder extends Seeder
                 'overlay_title' => 'SALE',
                 'overlay_discount' => 'UPTO 50% OFF',
                 'overlay_note' => 'MANY MORE EXCITING OFFERS IN-STORE AND ONLINE',
-                'overlay_hashtag' => '#STYLEWITHBHULIKA',
+                'overlay_hashtag' => '#STYLEWITHMAHADEV',
                 'sort_order' => 0,
             ],
             [

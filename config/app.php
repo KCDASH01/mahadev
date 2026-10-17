@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'sitemap_url' => env('SITEMAP_URL', 'https://www.bhulika.com'),
+    'sitemap_url' => env('SITEMAP_URL', 'https://ecom.kanpritech.com'),
 
     /*
     |--------------------------------------------------------------------------

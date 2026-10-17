@@ -37,7 +37,7 @@ class TwoFactorServiceTest extends TestCase
     {
         config([
             'services.twofactor.key' => 'testing-key',
-            'services.twofactor.template' => 'Bhulika Customer OTP Test',
+            'services.twofactor.template' => 'Mahadev Customer OTP Test',
         ]);
 
         Http::fake([
@@ -51,7 +51,7 @@ class TwoFactorServiceTest extends TestCase
 
             return str_contains($url, '/SMS/')
                 && str_contains($url, '/AUTOGEN/')
-                && str_contains($url, 'Bhulika');
+                && str_contains($url, 'Mahadev');
         });
     }
 

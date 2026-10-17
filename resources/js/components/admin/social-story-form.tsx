@@ -156,7 +156,7 @@ export default function SocialStoryFormFields({
                         id="overlay_hashtag"
                         name="overlay_hashtag"
                         defaultValue={socialStory?.overlay_hashtag ?? ''}
-                        placeholder="#STYLEWITHBHULIKA"
+                        placeholder="#STYLEWITHMAHADEV"
                     />
                     <InputError message={errors.overlay_hashtag} />
                 </div>

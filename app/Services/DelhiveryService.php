@@ -869,12 +869,12 @@ class DelhiveryService
 
     private function pickupLocationName(): string
     {
-        return (string) config('services.delhivery.pickup_location', 'BHULIKA B2C');
+        return (string) config('services.delhivery.pickup_location', '');
     }
 
     private function sellerGstTin(): string
     {
-        return (string) config('services.delhivery.seller_gst_tin', '21AAPCB0914N1Z1');
+        return (string) config('services.delhivery.seller_gst_tin', '');
     }
 
     private function hsnCode(): string

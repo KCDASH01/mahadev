@@ -86,7 +86,7 @@ export const socialStories: SocialStory[] = [
             title: 'SALE',
             discount: 'UPTO 50% OFF',
             note: 'MANY MORE EXCITING OFFERS IN-STORE AND ONLINE',
-            hashtag: '#STYLEWITHBHULIKA',
+            hashtag: '#STYLEWITHMAHADEV',
         },
     },
     { id: 2, type: 'image', image: img('photo-1756483492198-8ca91227489b', 900) },

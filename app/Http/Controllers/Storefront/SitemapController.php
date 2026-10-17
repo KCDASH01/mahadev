@@ -88,7 +88,7 @@ class SitemapController extends Controller
 
     private function publicUrl(string $path): string
     {
-        $base = rtrim((string) config('app.sitemap_url', 'https://www.bhulika.com'), '/');
+        $base = rtrim((string) config('app.sitemap_url', 'https://ecom.kanpritech.com'), '/');
 
         return $base.($path === '/' ? '/' : $path);
     }
